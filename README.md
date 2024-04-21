@@ -1,1 +1,1 @@
-# C-_SoSe24_Hoffman
+# C++_SoSe24_Hoffman
