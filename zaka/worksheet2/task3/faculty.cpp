@@ -8,8 +8,12 @@ int main()
 {
 	long n;
 	long result;
-		
-	cin >> n;
+
+	do
+	{
+		cin >> n;	
+	}
+	while (n < 0);
 	
 	result = fak(n);
 	
@@ -23,6 +27,9 @@ int main()
 
 long fak(unsigned long n)
 {
+	if (n < 0)
+		return -1;
+	
 	if (n == 0)
 		return 1;
 
