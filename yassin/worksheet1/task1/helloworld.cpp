@@ -9,8 +9,7 @@ int main(void)
 
     printf("Hello World! am %i.%i.%i\n", tag, monat, jahr);
 
-    /* std::cout << "Hello World!" << " am "
-    << tag << "." << monat << "." << jahr << std::endl; */
+    /* std::cout << "Hello World! am " << tag << "." << monat << "." << jahr << std::endl; */
 
     return 0;
 }
