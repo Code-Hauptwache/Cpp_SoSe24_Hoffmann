@@ -1,6 +1,6 @@
 #!/bin/sh
 
-CC = g++;
+CC = g++
 
 helloworld:
 	CC helloworld.cpp
