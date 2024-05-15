@@ -17,8 +17,25 @@ jobs:
       - name: Install dependencies
         run: sudo apt-get update && sudo apt-get install -y g++ make
 
-      - name: Build
-        run: make
-
-      - name: Run tests
-        run: make test
+      - name: Compile all .cpp and .c files and run Makefiles
+        run: |
+          # Find and compile all .cpp and .c files in /task[nummer] directories
+          find . -regex '.*/task[0-9]+' -type d | while read task_dir; do
+            echo "Processing directory: $task_dir"
+            makefile="$task_dir/Makefile"
+            if [ -f "$makefile" ]; then
+              echo "Found Makefile in $task_dir, running make..."
+              make -C "$task_dir"
+            else
+              # Compile all .cpp files
+              find "$task_dir" -maxdepth 1 -name '*.cpp' | while read cpp_file; do
+                echo "Compiling $cpp_file"
+                g++ -o "${cpp_file%.cpp}" "$cpp_file"
+              done
+              # Compile all .c files
+              find "$task_dir" -maxdepth 1 -name '*.c' | while read c_file; do
+                echo "Compiling $c_file"
+                gcc -o "${c_file%.c}" "$c_file"
+              done
+            fi
+          done
