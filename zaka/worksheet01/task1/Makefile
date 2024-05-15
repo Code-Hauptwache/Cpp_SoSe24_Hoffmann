@@ -1,6 +1,10 @@
-#!/bin/sh
+# Makefile
 
 CC = g++
+CFLAGS = -Wall -g
 
-helloworld:
-	CC helloworld.cpp
+helloworld: helloworld.cpp
+	$(CC) $(CFLAGS) -o helloworld helloworld.cpp
+
+clean:
+	rm -f helloworld
