@@ -62,3 +62,13 @@ ipch/
 
 # Ignore all MacOS specific files
 .DS_Store
+
+# Ignore compiled files without extensions globally
+/**/[!.]*[!./]
+
+# Optionally, ignore files without extensions in specific directories
+# Uncomment and adjust the following lines if needed
+# build/[!.]*[!./]
+# bin/[!.]*[!./]
+# debug/[!.]*[!./]
+# release/[!.]*[!./]
