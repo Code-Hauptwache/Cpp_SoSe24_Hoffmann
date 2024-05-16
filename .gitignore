@@ -1,3 +1,12 @@
+# Ignore all
+*
+
+# Unignore all with extensions
+!*.*
+
+# Unignore all dirs
+!*/
+
 # Ignore object files
 *.o
 *.obj
@@ -62,9 +71,6 @@ ipch/
 
 # Ignore all MacOS specific files
 .DS_Store
-
-# Ignore compiled files without extensions globally
-/**/[!.]*[!./]
 
 # Optionally, ignore files without extensions in specific directories
 # Uncomment and adjust the following lines if needed
