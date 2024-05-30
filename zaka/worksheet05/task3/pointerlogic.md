@@ -61,7 +61,7 @@ Line 1 - 4:
 graph RL
 	 D(pppc: 33fa\n Adress: 0x90df) --33fa--> C(ppc: 580d\nAdress: 0x33fa) --580d--> B(pc: 3cf6\nAdress: 0x580d) --3cf6--> A(c: 't'\nAdress: 0x3cf6)
 ```
-Line 5:
+Line 6:
 ```mermaid
 graph RL
 	 D(pppc: 33fa\n Adress: 0x90df) --33fa--> C(ppc: 580d\nAdress: 0x33fa) --580d--> B(pc: 3cf6\nAdress: 0x580d) --3cf6--> A(c: 'w'\nAdress: 0x3cf6)
