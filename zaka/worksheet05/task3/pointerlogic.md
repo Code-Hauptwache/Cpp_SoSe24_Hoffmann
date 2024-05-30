@@ -4,7 +4,7 @@
 
 - ```int n = 44;```
 	Eine Variable `n` vom Datentyp `int` wird deklariert und mit dem Wert `44` initialisiert.
-<br>
+
 - ```int* p = &n;```
 Ein Zeiger `p` vom Datentyp `int` wird deklariert und mit der Speicheradresse von `n` initialisiert.
 <br>
