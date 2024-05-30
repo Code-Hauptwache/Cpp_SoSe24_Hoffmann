@@ -1,3 +1,4 @@
+<!-- Um alle Diagramme und Formatierungen korrekt zu sehen, betrachte diese Datei bitte auf GitHub. -->
 ### Interpretieren Sie die folgenden Statements:
 
 **Antwort**
