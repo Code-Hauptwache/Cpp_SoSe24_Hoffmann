@@ -1,33 +1,53 @@
 #include <string>
 #include <iostream>
+#include <cassert>
 
 using namespace std;
 
-char tohex(int i)
+
+int todec(string s, int i) 
 {
-	if( i > 0 && i < 10) return (char)i;
-	if(i == 10) return 'a';
-	if(i == 11) return 'b';
-	if(i == 12) return 'c';
-	if(i == 13) return 'd';
-	if(i == 14) return 'e';
-	if(i == 15) return 'f';
+    assert(i >= 0 && i < s.length());
+    char c = s[i];
+    if (c >= '0' && c <= '9') 
+    {
+        return c - '0';
+    } 
+    else if (c >= 'a' && c <= 'f') 
+    {
+        return 10 + (c - 'a');
+    } 
+	else if (c >= 'A' && c <= 'F') 
+	{
+        return 10 + (c - 'A');
+    } 
+	else 
+	{
+        assert(false);
+    }
+    return -1; 
 }
 
-string hexadecimal(int n)
+int hex2dec(string s) 
 {
-	int k, m;
-	k = n/16
-	m = n%16
+    int result = 0;
+    for (int i = 0; i < s.length(); i++) 
+    {
+        result = result * 16 + todec(s, i);
+    }
+    return result;
 }
 
-int main(int argc, char **argv)
+int main() 
 {
-	int i;
-		
-	cout << "Geben sie eine Zahl ein: ";
-	cin >> i;
-		
-	
+    string s;
+    cout << "Geben Sie eine hexadezimale Zahl ein: ";
+    cin >> s;
+
+    int decimalValue = hex2dec(s);
+    cout << s << " in dezimal ist: " << decimalValue << endl;
+
+    return 0;
 }
+
 
