@@ -10,10 +10,10 @@ int main(int argc, char **argv)
   Complx b {2.0, 3.0};
   
   Complx c = a - b;
-  cout << c.real() << " + " << c.imag() << "i" << endl;      
+  cout << c.getReal() << " + " << c.getImag() << "i" << endl;      
 
   Complx d = a * b;
-  cout << d.real() << " + " << d.imag() << "i" << endl;   
+  cout << d.getReal() << " + " << d.getImag() << "i" << endl;   
      
   return 0;
 }
