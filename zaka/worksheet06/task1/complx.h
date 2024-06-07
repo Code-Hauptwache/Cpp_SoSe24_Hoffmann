@@ -14,10 +14,10 @@ namespace ToComplx{
 //      Complx(const Complx&) { };                     // Copy Konstruktor
       Complx(const Complx& z) : re(z.re), im(z.im) { }; // Copy Konstruktor
       
-      double real() const { return re; };            // Getter -> const
-      double imag() const { return im; };
-      void real(double r) { re = r; }                // Setter
-      void imag(double i) { im = i;  }
+      double getReal() const { return re; };            // Getter -> const
+      double getImag() const { return im; };
+      void setReal(double r) { re = r; }                // Setter
+      void setImag(double i) { im = i;  }
 
  // Eigene Memberfunktionen: ComplxAdd, ComplxSub, ComplxMult => Return by Value
 
