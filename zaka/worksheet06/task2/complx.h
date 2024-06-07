@@ -26,7 +26,7 @@ namespace ToComplx{
       Complx operator+(Complx z) { return Complx( re += z.re, im += z.im ); }
       Complx operator-(Complx z) { return Complx( re -= z.re, im -= z.im ); }
       Complx operator*(Complx z) { return Complx( re*z.re - im*z.im, re*z.im + im*z.re ); }
-      Complx operator|(Complx z) { return Complx( re = sqrt(re*re + im*im); }
+//      Complx operator|(Complx z) { return Complx( re = sqrt(re*re + im*im); }
       
    };
 };
