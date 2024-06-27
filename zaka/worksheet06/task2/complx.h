@@ -23,10 +23,12 @@ namespace ToComplx{
 
  // Eigene Memberfunktionen: ComplxAdd, ComplxSub, ComplxMult => Return by Value
 
-      Complx operator+(Complx z) { return Complx( re += z.re, im += z.im ); }
-      Complx operator-(Complx z) { return Complx( re -= z.re, im -= z.im ); }
+      Complx operator+(Complx z) { return Complx( re + z.re, im + z.im ); }
+      Complx operator-(Complx z) { return Complx( re - z.re, im - z.im ); }
       Complx operator*(Complx z) { return Complx( re*z.re - im*z.im, re*z.im + im*z.re ); }
-//      Complx operator|(Complx z) { return Complx( re = sqrt(re*re + im*im); }
+      
+      Complx operator~() const { return Complx( re, -im ); }
+      double magnitude() const { return sqrt( pow(re, 2) + pow(im, 2) ); }
       
    };
 };
