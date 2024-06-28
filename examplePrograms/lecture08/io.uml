@@ -1,0 +1,51 @@
+@startuml
+/' skinparam groupInheritance 2 '/
+
+abstract class ios_base
+abstract class basic_ios
+
+abstract class basic_ostream
+abstract class basic_istream
+
+abstract class basic_iostream
+
+class basic_ostringstream
+class basic_ofstream
+class basic_stringstream
+class basic_fstream
+class basic_ifstream
+class basic_istringstream
+
+/' hidden classes '/
+
+class foo1
+class foo2
+
+basic_ostream <|-- foo1
+basic_istream <|-- foo2
+foo1 <|-- basic_ostringstream
+foo1 <|-- basic_ofstream
+foo2 <|-- basic_istringstream
+foo2 <|-- basic_ifstream
+
+hide foo1
+hide foo2
+
+ios_base <|-- basic_ios
+
+basic_ios <|-- basic_ostream
+basic_ios <|-- basic_istream 
+
+basic_ostream <|-- basic_iostream
+basic_istream <|-- basic_iostream
+
+basic_ostream <|-- basic_ostringstream
+basic_ostream <|-- basic_ofstream
+
+basic_iostream <|-- basic_stringstream
+basic_iostream <|-- basic_fstream
+
+basic_istream <|-- basic_ifstream
+basic_istream <|-- basic_istringstream
+
+@enduml
