@@ -2235,7 +2235,85 @@ These commands display the contents of files in hexadecimal and octal formats, r
 ## Command `nm`
 This command reads the symbol table from the ELF file. Compare the results in the generated data without and with the `-s` option in the compiler.
 - **Answer:**
+    - **Without `-s` Option:**
+        ```sh
+        zaka@zakaBouj:/mnt/c/Users/zb200/Documents/GitHub/Cpp_SoSe24_Hoffman/zaka/worksheet06/task2$ nm complx_main
+        0000000000004010 V DW.ref.__gxx_personality_v0
+        0000000000003d48 d _DYNAMIC
+        0000000000003f68 d _GLOBAL_OFFSET_TABLE_
+        00000000000017b8 t _GLOBAL__sub_I_main
+        0000000000002000 R _IO_stdin_used
+                         w _ITM_deregisterTMCloneTable
+                         w _ITM_registerTMCloneTable
+                         U _Unwind_Resume@GCC_3.0
+        0000000000001762 t _Z41__static_initialization_and_destruction_0ii
+        0000000000001844 W _ZN8ToComplx6ComplxC1ERKS0_
+        00000000000017d2 W _ZN8ToComplx6ComplxC1Edd
+        0000000000001844 W _ZN8ToComplx6ComplxC2ERKS0_
+        00000000000017d2 W _ZN8ToComplx6ComplxC2Edd
+        0000000000001806 W _ZN8ToComplx6ComplxD1Ev
+        0000000000001806 W _ZN8ToComplx6ComplxD2Ev
+        0000000000001922 W _ZN8ToComplx6ComplxmiES0_
+        0000000000001988 W _ZN8ToComplx6ComplxmlES0_
+        00000000000018bc W _ZN8ToComplx6ComplxplES0_
+        000000000000189a W _ZNK8ToComplx6Complx7getImagEv
+        000000000000187a W _ZNK8ToComplx6Complx7getRealEv
+        0000000000001a6c W _ZNK8ToComplx6Complx9magnitudeEv
+        0000000000001a20 W _ZNK8ToComplx6ComplxcoEv
+                         U _ZNSolsEPFRSoS_E@GLIBCXX_3.4
+                         U _ZNSolsEd@GLIBCXX_3.4
+                         U _ZNSt8ios_base4InitC1Ev@GLIBCXX_3.4
+                         U _ZNSt8ios_base4InitD1Ev@GLIBCXX_3.4
+        0000000000004040 B _ZSt4cout@GLIBCXX_3.4
+                         U _ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_@GLIBCXX_3.4
+        0000000000004151 b _ZStL8__ioinit
+                         U _ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@GLIBCXX_3.4
+        0000000000002394 r __FRAME_END__
+        00000000000020a8 r __GNU_EH_FRAME_HDR
+        0000000000004018 D __TMC_END__
+        000000000000038c r __abi_tag
+        0000000000004018 B __bss_start
+                         U __cxa_atexit@GLIBC_2.2.5
+                         w __cxa_finalize@GLIBC_2.2.5
+        0000000000004000 D __data_start
+        0000000000001200 t __do_global_dtors_aux
+        0000000000003d40 d __do_global_dtors_aux_fini_array_entry
+        0000000000004008 D __dso_handle
+        0000000000003d30 d __frame_dummy_init_array_entry
+                         w __gmon_start__
+                         U __gxx_personality_v0@CXXABI_1.3
+                         U __libc_start_main@GLIBC_2.34
+                         U __stack_chk_fail@GLIBC_2.4
+        0000000000004018 D _edata
+        0000000000004158 B _end
+        0000000000001ae0 T _fini
+        0000000000001000 T _init
+        0000000000001160 T _start
+        0000000000004150 b completed.0
+        0000000000004000 W data_start
+        0000000000001190 t deregister_tm_clones
+        0000000000001240 t frame_dummy
+        0000000000001249 T main
+                         U pow@GLIBC_2.29
+        00000000000011c0 t register_tm_clones
+                         U sqrt@GLIBC_2.2.5
+      ```
+    - **With `s` Option:**
+        ```sh
+        zaka@zakaBouj:/mnt/c/Users/zb200/Documents/GitHub/Cpp_SoSe24_Hoffman/zaka/worksheet06/task2$ nm complx_main_stripped
+        nm: complx_main_stripped: no symbols
+        ```
 
 ## Command `ldd`
 This command shows which library functions the executable file uses or intends to use.
 - **Answer:**
+    ```sh
+    zaka@zakaBouj:/mnt/c/Users/zb200/Documents/GitHub/Cpp_SoSe24_Hoffman/zaka/worksheet06/task2$ ldd complx_main
+        linux-vdso.so.1 (0x00007fffc0b8e000)
+        libstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x00007f65a11eb000)
+        libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007f65a1104000)
+        libgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007f65a10e4000)
+        libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f65a0ebb000)
+        /lib64/ld-linux-x86-64.so.2 (0x00007f65a1429000)
+    zaka@zakaBouj:/mnt/c/Users/zb200/Documents/GitHub/Cpp_SoSe24_Hoffman/zaka/worksheet06/task2$
+    ```
