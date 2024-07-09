@@ -1,0 +1,14 @@
+@startuml
+class Konto {
+ __ public Member Functions __
+ +eroeffnen()
+ +einzahlen()
+ +auszahlen()
+ +abfragen()
+ +schliessen()
+ __ private Member Data __
+ -kontonummer : unsigned int
+ -saldo : int = 0
+}
+
+@enduml
