@@ -40,11 +40,11 @@ class Human
             cout << "Mother: "; Mother == "" ? cout << "N/A" << endl : cout << Mother << endl;
         }
 
-        void setMother(shared_ptr<Human> ptr, string m) { mom = ptr; Mother = m; }
         void setFather(shared_ptr<Human> ptr, string f) { dad = ptr; Father = f; }
+        void setMother(shared_ptr<Human> ptr, string m) { mom = ptr; Mother = m; }
 
-        shared_ptr<Human> showMother() { cout << "Mother: "; Mother == "" ? cout << "N/A" << endl : cout << Mother << endl; return mom; }
         shared_ptr<Human> showFather() { cout << "Father: "; Father == "" ? cout << "N/A" << endl : cout << Father << endl; return dad; }
+        shared_ptr<Human> showMother() { cout << "Mother: "; Mother == "" ? cout << "N/A" << endl : cout << Mother << endl; return mom; }
 
         ~Human() { cout << Name << " ist gestorben " << endl; }    
 };
