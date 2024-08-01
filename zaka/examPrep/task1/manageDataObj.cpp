@@ -12,13 +12,16 @@
 #include <iostream>
 #include <cstring>
 #include <limits>
+#include <sstream>
 #include <vector>
 
 using namespace std;
 
+
 void addDataObj(vector<string> &vector);
 void deleteDataObj(vector<string> &vector);
-void showDataObjs(vector<string> &vector, bool &sorted);
+template <typename T>
+void showDataObjs(vector<T> &vector, bool &sorted);
 
 int main()
 {
@@ -111,7 +114,8 @@ void deleteDataObj(vector<string> &vector)
     }
 }
 
-void showDataObjs(vector<string> &vector, bool &sorted)
+template <typename T>
+void showDataObjs(vector<T> &vector, bool &sorted)
 {
     size_t vectorSize = vector.size();
     
