@@ -1,0 +1,18 @@
+@startuml
+class Complx
+{
+	__private data__
+	- re : double
+	- im : double
+	__public Member Functions__
+	+ Complx()
+	+ ~Complx()
+	+ Complx(const Complx& z)
+	..Getter..
+	+ double getReal()
+	+ double getImag()
+	..Setter..
+	+ void setReal(double r)
+	+ void setImag(double i)
+}
+@enduml

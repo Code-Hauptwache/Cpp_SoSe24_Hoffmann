@@ -77,3 +77,4 @@ ipch/
 # bin/[!.]*[!./]
 # debug/[!.]*[!./]
 # release/[!.]*[!./]
+/.vscode
